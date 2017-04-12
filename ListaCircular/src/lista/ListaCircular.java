@@ -100,6 +100,7 @@ public class ListaCircular {
 		} else {
 			Node novoTail = this.tail.getAnterior();
 			this.tail.setAnterior(null);
+			this.tail.setProximo(null);
 			this.tail = novoTail;
 			novoTail.setProximo(this.head);
 			this.head.setAnterior(novoTail);
