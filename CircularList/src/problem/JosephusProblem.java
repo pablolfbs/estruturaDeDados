@@ -34,5 +34,6 @@ public class JosephusProblem {
 			System.out.println(soldiers.toString());
 		}
 		System.out.println("Sobrevivente: " + soldiers);
-	}	
+	}
+	
 }
