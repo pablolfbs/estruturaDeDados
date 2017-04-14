@@ -11,7 +11,7 @@ public class JosephusProblem {
 		
 		CircularLinkedList soldiers = new CircularLinkedList();
 		
-		n = 7;
+		n = 41;
 		m = 3;
 		
 		for (int i = 1; i <= n; i++) {
