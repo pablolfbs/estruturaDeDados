@@ -50,7 +50,6 @@ public class CircularLinkedList {
 			temp2.setPrevious(newNode);
 			this.countSize++;
 		}
-
 	}
 	
 	public Node getNode(int position) {
@@ -92,7 +91,7 @@ public class CircularLinkedList {
 	public void remove(int position) {
 		if (position == 0) {
 			this.removeHead();
-		} else if (position == countSize - 1) {
+		} else if (position == this.countSize - 1) {
 			this.removeTail();
 		} else {
 			Node node = this.getNode(position);
@@ -113,12 +112,10 @@ public class CircularLinkedList {
 			str += temp.getContent() + " ";
 			temp = temp.getNext();
 		}
-		return str;
-		
+		return str;		
 	}
 	
 	public int size() {
 		return this.countSize;
-	}
-	
+	}	
 }
