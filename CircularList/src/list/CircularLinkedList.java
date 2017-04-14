@@ -102,5 +102,5 @@ public class CircularLinkedList {
 	
 	public int size() {
 		return this.countSize;
-	}	
+	}
 }
