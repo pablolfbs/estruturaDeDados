@@ -33,21 +33,6 @@ public class CircularLinkedList {
 			newNode.setNext(this.head);
 			this.head.setPrevious(newNode);
 			this.tail = newNode;
-			countSize++;
-		}
-	}
-	
-	public void insertPosition(int position, int content) {
-		if (position == 0) {
-			this.insertHead(content);
-		} else if (position >= this.countSize) {
-			this.insertTail(content);
-		} else {
-			Node temp1 = this.getNode(position - 1);
-			Node temp2 = temp1.getNext();
-			Node newNode = new Node(temp1, content, temp2);
-			temp1.setNext(newNode);
-			temp2.setPrevious(newNode);
 			this.countSize++;
 		}
 	}
@@ -68,9 +53,9 @@ public class CircularLinkedList {
 			this.head.setNext(null);
 			this.head.setPrevious(null);
 			temp.setPrevious(this.tail);
-			this.tail.setPrevious(temp);
+			this.tail.setNext(temp);
 			this.head = temp;
-			this.countSize++;
+			this.countSize--;
 		}
 	}
 	

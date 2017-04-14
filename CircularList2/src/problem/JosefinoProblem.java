@@ -12,7 +12,7 @@ public class JosefinoProblem {
 		CircularLinkedList soldiers = new CircularLinkedList();
 		
 		n = 7;
-		m = 2;
+		m = 3;
 		
 		for(int i = 1; i <= n; i++){
 			soldiers.insertTail(i);
@@ -30,7 +30,7 @@ public class JosefinoProblem {
 				
 				count++;
 				
-				if(count == soldiers.size()) {
+				if(count == soldiers.size()){
 					count = 0;
 				}
 				
@@ -47,14 +47,3 @@ public class JosefinoProblem {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-

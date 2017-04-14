@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="CircularList/src"/>
+	<classpathentry kind="src" path="CircularList2/src"/>
+	<classpathentry kind="src" path="DLinkedList/src"/>
+	<classpathentry kind="src" path="ListaCircular/src"/>
+	<classpathentry kind="src" path="ListaDuplamenteEncadeada/src"/>
+	<classpathentry kind="src" path="ListaEncadeada/src"/>
+	<classpathentry kind="src" path="ListaProdutos/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="DLinkedList/bin"/>
+</classpath>
