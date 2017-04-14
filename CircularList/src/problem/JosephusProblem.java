@@ -33,6 +33,6 @@ public class JosephusProblem {
 			soldiers.remove(count);		
 			System.out.println(soldiers.toString());
 		}
-		System.out.println("Sobrevivente:" + soldiers);
+		System.out.println("Sobrevivente: " + soldiers);
 	}	
 }
