@@ -1,44 +1,25 @@
 package test;
 
 import java.util.Random;
-import search.BinarySearch;
-import search.LinearSearch;
-import sort.BubbleSort;
+
+import list.DLinkedList;
 
 public class SearchTest {
 	
 	public static void main(String[] args) {
 		
-		int[] array = new int[10];
-		
 		Random rand = new Random();
+		int size = 10;
 		
-		for (int i = 0; i < array.length; i++) {
-			array[i] = rand.nextInt(100);
+		DLinkedList list = new DLinkedList();
+		
+		for (int i = 0; i < size; i++) {
+			list.insertTail(rand.nextInt(100));
 		}
 		
-		LinearSearch search = new LinearSearch();
+		System.out.println(list.toString());
 		
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
-		}
-		System.out.println();
-		System.out.println(search.linearSearch(array, 12));
-		
-		BubbleSort sort = new BubbleSort();
-		array = sort.bubbleSort(array);
-		
-		System.out.println();
-		
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
-		}
-		
-		System.out.println();
-		
-		BinarySearch search1 = new BinarySearch();
-		System.out.println(search1.binarySearch(array, 12));
-		
+		System.out.println(list.linearSearch(32));
 	}
 
 }

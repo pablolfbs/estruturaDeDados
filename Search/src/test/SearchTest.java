@@ -28,7 +28,7 @@ public class SearchTest {
 		BubbleSort sort = new BubbleSort();
 		array = sort.bubbleSort(array);
 		
-		System.out.println();
+//		System.out.println();
 		
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
@@ -37,8 +37,7 @@ public class SearchTest {
 		System.out.println();
 		
 		BinarySearch search1 = new BinarySearch();
-		System.out.println(search1.binarySearch(array, 12));
-		
+		System.out.println(search1.binarySearch(array, 12));		
 	}
 
 }

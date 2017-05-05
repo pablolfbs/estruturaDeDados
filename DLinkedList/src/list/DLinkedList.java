@@ -133,4 +133,69 @@ public class DLinkedList {
 		}
 		return list;
 	}
+	
+	public boolean linearSearch(int key) {
+		Node tmp = this.head;
+		for (int i = 0; i < countSize; i++) {
+			if(tmp.getContent() == key) {
+				return true;
+			}
+			tmp = tmp.getNext();
+		}
+		return false;
+	}
+	
+	public boolean binarySearch(int key) {
+		int first = 0;
+		int last = this.countSize - 1;
+		int middle;
+		
+		while (first <= last) {
+			middle = (first + last) / 2;
+			int middleContent = getNode(middle).getContent();
+			if (key == middleContent) {
+				return true;
+			}
+			if (key < middleContent) {
+				last = middle - 1;
+			} else {
+				first = middle + 1;
+			}
+		}
+		return false;
+	}
+	
+	public void bubbleSort() {
+		for (int i = 0; i < countSize; i++) {
+			
+			for (int j = 0; j < countSize - 1; j++) {
+				Node tmp1 = getNode(j);
+				Node tmp2 = getNode(j + 1);
+				
+				if (tmp1.getContent() > tmp2.getContent()) {
+					tmp1.setNext(tmp2.getNext());
+					tmp2.setNext(tmp1);
+					
+					if (tmp1 == this.head) {
+						tmp2.getNext().setPrevious(tmp1);
+						tmp2.setPrevious(null);
+						this.head = tmp2;
+						tmp1.setPrevious(tmp2);
+						
+					} else if (tmp2 == this.tail) {
+						this.tail = tmp1;
+						tmp2.setPrevious(tmp1.getPrevious());
+						tmp1.getPrevious().setNext(tmp2);
+						tmp1.setPrevious(tmp2);
+						
+					} else {
+						tmp2.getNext().setPrevious(tmp1);
+						tmp1.getPrevious().setNext(tmp2);
+						tmp2.setPrevious(tmp1.getPrevious());
+						tmp1.setPrevious(tmp2);
+					}
+				}
+			}
+		}
+	}
 }
