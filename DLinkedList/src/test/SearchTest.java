@@ -19,7 +19,10 @@ public class SearchTest {
 		
 		System.out.println(list.toString());
 		
-		System.out.println(list.linearSearch(32));
+//		System.out.println(list.linearSearch(32));
+		
+		list.bubbleSort();
+		
+		System.out.println(list.toString());
 	}
-
 }

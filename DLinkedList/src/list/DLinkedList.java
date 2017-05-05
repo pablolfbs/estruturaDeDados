@@ -174,15 +174,17 @@ public class DLinkedList {
 				
 				if (tmp1.getContent() > tmp2.getContent()) {
 					tmp1.setNext(tmp2.getNext());
-					tmp2.setNext(tmp1);
+					
 					
 					if (tmp1 == this.head) {
+						tmp2.setNext(tmp1);
 						tmp2.getNext().setPrevious(tmp1);
 						tmp2.setPrevious(null);
 						this.head = tmp2;
 						tmp1.setPrevious(tmp2);
 						
 					} else if (tmp2 == this.tail) {
+						tmp2.setNext(tmp1);
 						this.tail = tmp1;
 						tmp2.setPrevious(tmp1.getPrevious());
 						tmp1.getPrevious().setNext(tmp2);
@@ -190,6 +192,7 @@ public class DLinkedList {
 						
 					} else {
 						tmp2.getNext().setPrevious(tmp1);
+						tmp2.setNext(tmp1);
 						tmp1.getPrevious().setNext(tmp2);
 						tmp2.setPrevious(tmp1.getPrevious());
 						tmp1.setPrevious(tmp2);
