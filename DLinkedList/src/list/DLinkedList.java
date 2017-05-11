@@ -148,10 +148,13 @@ public class DLinkedList {
 	public boolean binarySearch(int key) {
 		int first = 0;
 		int last = this.countSize - 1;
+		//Índice central da lista
 		int middle;
 		
 		while (first <= last) {
+			//Calcula o índice central
 			middle = (first + last) / 2;
+			//Obtém o nó central e atribui o valor armazenado no nó para middleContent
 			int middleContent = getNode(middle).getContent();
 			if (key == middleContent) {
 				return true;
