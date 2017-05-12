@@ -15,7 +15,5 @@ public class SelectionSort {
 			array[i] = smallerContent;
 		}
 		return array;
-
 	}
-
 }
