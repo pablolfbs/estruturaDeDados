@@ -24,5 +24,9 @@ public class SearchTest {
 		list.bubbleSort();
 		
 		System.out.println(list.toString());
+		
+		System.out.println();
+		
+		System.out.println(list.binarySearch(17));
 	}
 }

@@ -3,6 +3,7 @@ package test;
 import java.util.Random;
 import search.BinarySearch;
 import search.LinearSearch;
+import search.RecursiveBinarySearch;
 import sort.BubbleSort;
 
 public class SearchTest {
@@ -36,8 +37,12 @@ public class SearchTest {
 		
 		System.out.println();
 		
-		BinarySearch search1 = new BinarySearch();
-		System.out.println(search1.binarySearch(array, 12));		
+//		BinarySearch search1 = new BinarySearch();
+//		System.out.println(search1.binarySearch(array, 12));
+		
+		RecursiveBinarySearch rSearch = new RecursiveBinarySearch();
+		System.out.println(rSearch.recursiveBinarySearch(array, 12));		
+
 	}
 
 }

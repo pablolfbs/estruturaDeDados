@@ -180,14 +180,15 @@ public class DLinkedList {
 					
 					
 					if (tmp1 == this.head) {
-						tmp2.setNext(tmp1);
 						tmp2.getNext().setPrevious(tmp1);
+						tmp2.setNext(tmp1);
 						tmp2.setPrevious(null);
 						this.head = tmp2;
 						tmp1.setPrevious(tmp2);
 						
 					} else if (tmp2 == this.tail) {
 						tmp2.setNext(tmp1);
+						tmp1.setNext(null);
 						this.tail = tmp1;
 						tmp2.setPrevious(tmp1.getPrevious());
 						tmp1.getPrevious().setNext(tmp2);
