@@ -49,5 +49,24 @@ public class LinkedQueue {
 		}
 		return oldFirst.getContent();
 	}
+	
+	public int peek() {
+		if(isEmpty()){
+			throw new NoSuchElementException();
+		}
+		return this.first.getContent();
+	}
+	
+	public String toString() {
+		String str = "";
+		
+		Node tmp = this.first;
+		
+		for (int i = 0; i < this.size; i++) {
+			str += tmp.getContent() + " ";
+			tmp = tmp.getNext();
+		}
+		return str;
+	}
 
 }
