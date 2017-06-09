@@ -23,8 +23,7 @@ public class QueueTest {
 		
 		System.out.println("Dequeue: " + queue.dequeue());
 		
-		System.out.println("Peek: " + queue.peek());
-		
+		System.out.println("Peek: " + queue.peek());		
 	}
 
 }
