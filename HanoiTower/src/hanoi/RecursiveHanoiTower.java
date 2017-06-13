@@ -15,5 +15,4 @@ public class RecursiveHanoiTower {
 			executeHanoi(n - 1, aux, destination, source);
 		}
 	}
-
 }
