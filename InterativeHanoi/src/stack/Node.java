@@ -2,18 +2,18 @@ package stack;
 
 public class Node {
 	
-	private int content;
+	private Object content;
 	private Node next;
 	
-	public Node(int content) {
+	public Node(Object content) {
 		this.content = content;
 	}
 
-	public int getContent() {
+	public Object getContent() {
 		return content;
 	}
 
-	public void setContent(int content) {
+	public void setContent(Object content) {
 		this.content = content;
 	}
 

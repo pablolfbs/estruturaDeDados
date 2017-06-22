@@ -4,14 +4,9 @@ import java.util.NoSuchElementException;
 
 public class LinkedStack {
 	
-	private Node source;
-	private Node destination;
-	private Node aux;
+	private Node top;
 	private int size;
 	
-	public void executeHanoi() {
-		source.setNext(destination);
-	}
 	public LinkedStack() {
 		this.top = null;
 		this.size = 0;
@@ -25,7 +20,7 @@ public class LinkedStack {
 		return (this.top) == null;
 	}
 	
-	public void push(int content) {
+	public void push(Object content) {
 		Node oldTop = top;
 		
 //		Node newNode = new Node(content);
@@ -38,13 +33,13 @@ public class LinkedStack {
 	}
 	
 	//Desempilhamento
-	public int pop() {
+	public Object pop() {
 		
 		if(isEmpty()) {
 			throw new NoSuchElementException("Stack is empty"); 
 		}
 		Node oldTop = top;
-		int content = oldTop.getContent();
+		Object content = oldTop.getContent();
 		top = oldTop.getNext();
 		oldTop.setNext(null);
 		
@@ -54,7 +49,7 @@ public class LinkedStack {
 	}
 	
 	//Olhadinha ou Espiada: não desempilha
-	public int peek() {
+	public Object peek() {
 		if (isEmpty()) {
 			throw new NoSuchElementException("Stack is empty");
 		}
