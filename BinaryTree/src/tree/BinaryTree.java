@@ -8,6 +8,10 @@ public class BinaryTree {
 		this.root = null;
 	}
 
+	public Node getRoot() {
+		return this.root;
+	}
+
 	public void insertNode(int data) {
 
 		// Instanciar um novo nó.
@@ -40,55 +44,72 @@ public class BinaryTree {
 
 						// Interrompe o laço.
 						return;
-					
-					// Se chegamos aqui adicionamos à direita.
-					} else {
-
-						// Troca o foco para o filho da direita.
-						focusNode = focusNode.getRightChild();
-						
-						// Se não há filho na direita.
-						if (focusNode == null) {
-
-							// O novo nó será inserido à direita.
-							parent.setRightChild(newNode);
-
-							// Interrompe o laço.
-							return;
-						} else {
-							
-							return;
-						}
 					}
+					// Se chegamos aqui adicionamos à direita.
+				} else if (data > focusNode.getData()) {
+
+					// Troca o foco para o filho da direita.
+					focusNode = focusNode.getRightChild();
+
+					// Se não há filho na direita.
+					if (focusNode == null) {
+
+						// O novo nó será inserido à direita.
+						parent.setRightChild(newNode);
+
+						// Interrompe o laço.
+						return;
+					}
+				} else {
+
+					return;
 				}
 			}
 		}
 	}
+
 	
+
 	// Busca por um nó de acordo com o valor informado.
 	public Node findNode(int data) {
-		
+
 		// Inicia no topo da árvore.
 		Node focusNode = this.root;
-		
+
 		while (focusNode.getData() != data) {
-			
+
 			// Se o valor for menor que o nó, buscamos à esquerda.
 			if (data < focusNode.getData()) {
-				
+
 				// Direciona o foco para o filho da esquerda.
 				focusNode = focusNode.getLeftChild();
 			} else {
-				
+
 				// Direciona o foco para o filho da direita.
 				focusNode = focusNode.getRightChild();
 			}
-			
+
 			if (focusNode == null) {
-				
+
 				return null;
 			}
 		}
 		return focusNode;
+	}
+
+	// Percurso em ordem.
+	public void inOrder(Node focusNode) {
+
+		if (focusNode != null) {
+
+			// Visita recursivamente a sub-árvore da esquerda.
+			inOrder(focusNode.getLeftChild());
+
+			// Visita a raiz.
+			System.out.println(focusNode.getData());
+
+			// Visita recursivamente a sub-árvore da direita.
+			inOrder(focusNode.getRightChild());
+		}
 	}
 }
