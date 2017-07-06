@@ -68,8 +68,6 @@ public class BinaryTree {
 		}
 	}
 
-	
-
 	// Busca por um nó de acordo com o valor informado.
 	public Node findNode(int data) {
 
@@ -111,5 +109,13 @@ public class BinaryTree {
 			// Visita recursivamente a sub-árvore da direita.
 			inOrder(focusNode.getRightChild());
 		}
+	}
+
+	public void preOrder(Node focusNode) {
+		
+	}
+
+	public void posOrder(Node focusNode) {
+		
 	}
 }
