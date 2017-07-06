@@ -43,7 +43,7 @@ public class BinaryTree {
 						parent.setLeftChild(newNode);
 
 						// Interrompe o laço.
-						return;
+						return; // também pode ser usado o break;
 					}
 					// Se chegamos aqui adicionamos à direita.
 				} else if (data > focusNode.getData()) {
@@ -58,11 +58,11 @@ public class BinaryTree {
 						parent.setRightChild(newNode);
 
 						// Interrompe o laço.
-						return;
+						return; // também pode ser usado o break;
 					}
 				} else {
 
-					return;
+					return; // também pode ser usado o break;
 				}
 			}
 		}
