@@ -113,9 +113,32 @@ public class BinaryTree {
 
 	public void preOrder(Node focusNode) {
 		
+		if (focusNode != null) {
+
+			// Visita a raiz.
+			System.out.println(focusNode.getData());
+
+			// Visita recursivamente a sub-árvore da esquerda.
+			preOrder(focusNode.getLeftChild());
+
+			// Visita recursivamente a sub-árvore da direita.
+			preOrder(focusNode.getRightChild());
+		}
 	}
 
-	public void posOrder(Node focusNode) {
+	public void postOrder(Node focusNode) {
 		
+		if (focusNode != null) {
+
+			// Visita recursivamente a sub-árvore da esquerda.
+			postOrder(focusNode.getLeftChild());
+
+			// Visita recursivamente a sub-árvore da direita.
+			postOrder(focusNode.getRightChild());
+
+			// Visita a raiz.
+			System.out.println(focusNode.getData());
+
+		}
 	}
 }
