@@ -25,6 +25,7 @@ public class ListaDuplamenteEncadeada {
 			 */
 			countSize++;
 		}
+		
 	}
 
 	/*
@@ -43,6 +44,7 @@ public class ListaDuplamenteEncadeada {
 			proximo.setAnterior(novoNo);
 			countSize++;
 		}
+		
 	}
 
 	public Node getNode(int posicao) {
@@ -84,6 +86,7 @@ public class ListaDuplamenteEncadeada {
 			proximo.setAnterior(anterior);
 			countSize--;
 		}
+		
 	}
 
 	/*
@@ -101,7 +104,9 @@ public class ListaDuplamenteEncadeada {
 			if (countSize == 0) {
 				this.tail = null;
 			}
+			
 		}
+		
 	}
 
 	/*
